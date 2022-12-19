@@ -134,7 +134,12 @@ class PlayState extends MusicBeatState
 
 	var talking:Bool = true;
 	var songScore:Int = 0;
+	var songMisses:Int = 0;
+	var accuracy:Float = 0;
+	public var ratingPercent:Float;
 	var scoreTxt:FlxText;
+
+	var scoreSeparator:String = ' | ';
 
 	public static var campaignScore:Int = 0;
 
@@ -1654,7 +1659,7 @@ class PlayState extends MusicBeatState
 
 		super.update(elapsed);
 
-		scoreTxt.text = "Score:" + songScore;
+		scoreTxt.text = "Score:" + songScore + scoreSeparator + 'Combo Breaks: ' + songMisses + scoreSeparator;
 
 		if (controls.PAUSE && startedCountdown && canPause)
 		{
