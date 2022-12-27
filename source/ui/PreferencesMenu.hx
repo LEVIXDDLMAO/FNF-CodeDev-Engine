@@ -31,6 +31,7 @@ class PreferencesMenu extends Page
 		createPrefItem('FPS Counter', 'fps-counter', true);
 		createPrefItem('Auto Pause', 'auto-pause', false);
 		createPrefItem('Ghost Tapping', 'ghost-tapping', true);
+		createPrefItem('Middle Scroll', 'middle-scroll', false);
 		camFollow = new FlxObject(FlxG.width / 2, 0, 140, 70);
 		if (items != null)
 		{
@@ -59,6 +60,7 @@ class PreferencesMenu extends Page
 		preferenceCheck('fps-counter', true);
 		preferenceCheck('auto-pause', false);
 		preferenceCheck('ghost-tapping', true);
+		preferenceCheck('middle-scroll', false);
 		preferenceCheck('master-volume', 1);
 		if (!getPref('fps-counter'))
 		{
