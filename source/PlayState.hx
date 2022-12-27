@@ -1175,7 +1175,6 @@ class PlayState extends MusicBeatState
 						}
 					});
 					FlxG.sound.play(Paths.sound('introGo' + altSuffix), 0.6);
-				case 4:
 			}
 
 			swagCounter += 1;
@@ -1206,8 +1205,6 @@ class PlayState extends MusicBeatState
 		DiscordClient.changePresence(detailsText, SONG.song + " (" + storyDifficultyText + ")", iconRPC, true, songLength);
 		#end
 	}
-
-	var debugNum:Int = 0;
 
 	private function generateSong():Void
 	{
@@ -2282,6 +2279,8 @@ class PlayState extends MusicBeatState
 
 	function noteMiss(direction:Int = 1):Void
 	{
+		songMisses++;
+
 		if (!boyfriend.stunned)
 		{
 			health -= 0.04;
