@@ -30,6 +30,7 @@ class PreferencesMenu extends Page
 		createPrefItem('Camera Zooming on Beat', 'camera-zoom', true);
 		createPrefItem('FPS Counter', 'fps-counter', true);
 		createPrefItem('Auto Pause', 'auto-pause', false);
+		createPrefItem('Ghost Tapping', 'ghost-tapping', true);
 		camFollow = new FlxObject(FlxG.width / 2, 0, 140, 70);
 		if (items != null)
 		{
@@ -57,6 +58,7 @@ class PreferencesMenu extends Page
 		preferenceCheck('camera-zoom', true);
 		preferenceCheck('fps-counter', true);
 		preferenceCheck('auto-pause', false);
+		preferenceCheck('ghost-tapping', true);
 		preferenceCheck('master-volume', 1);
 		if (!getPref('fps-counter'))
 		{
